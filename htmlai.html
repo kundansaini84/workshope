@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/ai/styleai.css">
+</head>
+<body>
+    <!-- AI Portfolio Generator Section -->
+<section id="ai-portfolio-generator" class="section">
+    <div class="container">
+        <h2 class="section-title">AI Portfolio Generator</h2>
+        
+        <!-- Input Form -->
+        <div class="ai-form-container">
+            <div class="form-group">
+                <label for="userPrompt">Describe yourself and your work:</label>
+                <textarea id="userPrompt" rows="4" placeholder="Example: I am a full-stack developer with 5 years of experience in React, Node.js, and Python. I specialize in building scalable web applications..."></textarea>
+            </div>
+            
+            <div class="style-options">
+                <h3>Customize Style</h3>
+                <div class="style-grid">
+                    <div class="style-option">
+                        <label>Theme:</label>
+                        <select id="themeSelect">
+                            <option value="professional">Professional</option>
+                            <option value="creative">Creative</option>
+                            <option value="minimal">Minimal</option>
+                            <option value="bold">Bold</option>
+                        </select>
+                    </div>
+                    
+                    <div class="style-option">
+                        <label>Color Scheme:</label>
+                        <div class="color-pickers">
+                            <input type="color" id="primaryColorPicker" value="#2563eb">
+                            <input type="color" id="secondaryColorPicker" value="#1e40af">
+                            <input type="color" id="accentColorPicker" value="#3b82f6">
+                        </div>
+                    </div>
+                    
+                    <div class="style-option">
+                        <label>Font Style:</label>
+                        <select id="fontSelect">
+                            <option value="Inter">Inter</option>
+                            <option value="Poppins">Poppins</option>
+                            <option value="Roboto">Roboto</option>
+                            <option value="Montserrat">Montserrat</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button id="generatePortfolio" class="btn btn-primary">Generate Portfolio</button>
+        </div>
+
+        <!-- Generated Content Preview -->
+        <div id="generatedContent" class="generated-content">
+            <div class="preview-header">
+                <h3>Generated Portfolio Preview</h3>
+                <button id="downloadPortfolio" class="btn btn-secondary" style="display: none;">
+                    Download Portfolio
+                </button>
+            </div>
+            <div id="previewArea" class="preview-area"></div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Generating your portfolio...</p>
+        </div>
+    </div>
+</section>
+<script src="/ai/scriptai.js"></script>
+</body>
+</html>
